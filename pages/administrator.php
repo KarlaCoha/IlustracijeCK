@@ -2,7 +2,7 @@
 session_start();
 
 // Spajanje na bazu podataka
-$servername = "localhost"; // Promijenite ovo prema vašem MySQL serveru
+$servername = "localhost"; 
 $username = "root";
 $password = "";
 $database = "ilustracije";
@@ -30,7 +30,7 @@ if ($_SESSION['administratorska_prava'] != 1) {
 // Brisanje ilustracije ako je zahtjev poslan
 if (isset($_GET['delete_id'])) {
   $stmt = $conn->prepare("DELETE FROM ilustracije WHERE id = ?");
-  $stmt->bind_param("i", $_GET['delete_id']); // "i" označava integer
+  $stmt->bind_param("i", $_GET['delete_id']); 
   $stmt->execute();
   $stmt->close();
 }
@@ -122,7 +122,6 @@ $result = $conn->query($sql);
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
-                            // Ažurirajte prikaz u ćeliji tablice
                             cell.innerText = value;
                         }
                     };
@@ -131,7 +130,6 @@ $result = $conn->query($sql);
                 }
             }
 
-            // Završi uređivanje nakon što su promjene spremljene
             exitEditMode(row);
         }
 
@@ -202,7 +200,6 @@ $result = $conn->query($sql);
       </div>
       <p>Ovdje možete dodati novu vijest koja će privući pažnju posjetitelja. Vaši unosi su ključni za obogaćivanje naše ponude i omogućuju nam da predstavimo najnovije vijesti i informacije. Hvala vam na trudu i doprinosu koji čini našu stranicu posebnom.</p>
 
-      <!-- Poruka o grešci -->
       <div id="errorMessage" class="alert alert-danger d-none" role="alert">
         Molimo ispravite sljedeće greške:
         <ul id="errorList"></ul>
@@ -312,7 +309,7 @@ $result = $conn->query($sql);
         document.getElementById("porukaKategorija").innerHTML = "";
       }
 
-      // Ako forma nije ispravna, spriječi slanje
+      // Ak forma nije ok, spriječi slanje
       if (!slanjeForme) {
         event.preventDefault();
       }

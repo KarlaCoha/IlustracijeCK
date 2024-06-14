@@ -18,11 +18,9 @@
 
   <?php include('navbar.php'); ?>
 
-  <!-- Main content -->
   <main>
     <div class="faq-section">
       <div class="container">
-        <!-- FAQ Section -->
         <div class="hr-container">
           <span class="hr-title">ČESTA PITANJA</span>
           <hr class="custom-hr">
@@ -101,11 +99,6 @@
               <a href="https://www.instagram.com/ilustracije_ck/?img_index=1" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <!-- Kraj dodatka -->
-
-          <!-- Dodano: Ikone za Facebook i Instagram -->
-
-
         </div>
       </div>
     </div>

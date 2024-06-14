@@ -6,11 +6,8 @@ body {
 
 .custom-header {
   background-image: url('../images/header-kraj.png');
-  /* Postavite sliku pozadine za zaglavlje */
   background-size: cover;
-  /* Da slika pokrije cijelu pozadinu */
   background-position: center;
-  /* Da slika bude centrirana */
   padding-bottom: 35px;
 }
 
@@ -23,7 +20,6 @@ p.e-mail-info {
 .logo {
   width: 160px;
   padding-top: 10px;
-  /* Prilagodite veličinu loga prema potrebi */
 }
 
 .navbar-nav .nav-link:focus,
@@ -46,19 +42,17 @@ p.e-mail-info {
 
 .dropdown-menu {
   background-color: #183b6d;
-  /* Postavite pozadinu dropdown menija na transparent */
   border: none;
-  /* Uklonite rub dropdown menija */
 }
 
 @media (max-width: 768px) {
   .dropdown-menu {
-      max-width: 200px; /* Prilagodite širinu prema potrebi */
+      max-width: 200px; 
   }
 
   .dropdown-item {
-      white-space: normal; /* Dozvoli prelom teksta */
-      overflow-wrap: break-word; /* Prekid teksta kako bi se prelomio */
+      white-space: normal; 
+      overflow-wrap: break-word; 
   }
 }
 
@@ -66,12 +60,10 @@ p.e-mail-info {
 .dropdown-menu .dropdown-item {
   background-color: transparent;
   color: white;
-  /* Postavite pozadinu stavki u dropdown meniju na transparent */
 }
 
 .dropdown-menu .nav-link:hover {
   color: #87a8d6;
-  /* Bordo boja */
 }
 
 .dropdown-menu .nav-link:focus,
@@ -86,13 +78,12 @@ p.e-mail-info {
     height: 600px;  Prilagodite visinu sekcija prema potrebi 
 }
 
-/* Dodajte padding na footer */
+*/
 .footer-about-us {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Dodajte ostatak CSS-a ispod */
 
 
 .first-section,
@@ -113,9 +104,7 @@ footer {
   background-size: cover;
   background-position: center;
   padding-bottom: 5px;
-  /* Prilagodite potrebnoj udaljenosti od sekcije ispod */
   height: auto;
-  /* Postavite visinu na auto kako bi se sekcija prilagodila sadržaju */
 }
 
 .container{
@@ -124,15 +113,12 @@ footer {
 
 .second-section .container {
   padding-left: 15px !important;
-  /* Dodajte padding lijevo */
   padding-right: 15px !important;
-  /* Dodajte padding desno */
 }
 
 .first-section,
 .third-section {
   background-color: #2B2B2B;
-  /* Prozirna pozadina */
 }
 
 .hr-container {
@@ -185,32 +171,22 @@ footer {
   font-size: 13px;
 }
 
-/* Ukloni pozadinu */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: transparent !important;
-  /* Transparentna pozadina */
   border: none !important;
-  /* Ukloni obrub */
   padding: 20px !important;
-  /* Povećaj prostor oko strelice */
 }
 
-/* Učitaj prilagođenu sliku strelice i promijeni boju */
 .carousel-control-prev-icon::before,
 .carousel-control-next-icon::before {
   content: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3e%3cpath d="M5.5 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5z" fill="%23555da3" /%3e%3c/svg%3e') !important;
   /* Prilagođena strelica */
   width: 30px !important;
-  /* Povećaj širinu strelice */
   height: 30px !important;
-  /* Povećaj visinu strelice */
 }
 
 
-
-/* Vaš dodani CSS */
-/* Vaš dodani CSS */
 @media (max-width: 768px) {
   .carousel-item .d-flex {
     display: block;
@@ -231,7 +207,6 @@ footer {
 
 .about-us-section {
   padding: 30px 0;
-  /* Smanjili padding */
 }
 
 .about-us-section .section-header {
@@ -249,7 +224,6 @@ footer {
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: #2B2B2B;
-  /* Prozirna pozadina */
 
 }
 
@@ -262,38 +236,29 @@ footer {
 
 .section-content {
   margin-left: 20px;
-  /* Dodajte prostor sa leve strane */
   margin-right: 20px;
-  /* Dodajte prostor sa desne strane */
 }
 
 .section-content-r {
   margin-left: 20px;
-  /* Dodajte prostor sa leve strane */
   margin-right: 20px;
   margin-bottom: 390px;
-  /* Dodajte prostor sa desne strane */
 }
 
 .section-header.o-nama,
 .section-header.nasa-vizija {
   margin-left: 20px;
-  /* Dodajte prostor sa leve strane */
   margin-right: 20px;
-  /* Dodajte prostor sa desne strane */
 }
 
 .section-header {
   margin-bottom: 20px;
-  /* Dodajte prostor ispod naslova */
 }
 
 
 .icons-row {
   margin-left: 20px;
-  /* Dodajte prostor sa leve strane */
   margin-right: 20px;
-  /* Dodajte prostor sa desne strane */
 }
 
 .about-us-section .section-content p {
@@ -328,13 +293,11 @@ footer {
 }
 
 
-/* Pravilno učitajte ikonice */
 .about-us-section .icon-box i {
   font-size: 25px;
   margin-bottom: 10px;
   display: block;
   color: white;
-  /* Osigurajte da ikonice budu bijele ili promijenite boju prema potrebi */
 }
 
 .icons-row .icon-box p {
@@ -347,25 +310,19 @@ footer {
   justify-content: space-around;
   margin-top: 85px;
   margin-bottom: 30px;
-  /* Povećajte razmak prema potrebi */
 }
 
 
 /* FAQ Section Specific Styles */
 .faq-section {
   background-image: url('../images/bg-kraj.png');
-  /* Postavite sliku pozadine za cijelu stranicu */
   background-size: cover;
-  /* Da slika pokrije cijelu pozadinu */
   background-position: center;
-  /* Da slika bude centrirana */
   height: calc(100vh - 130px);
-  /* Prilagodite visinu sekcije da oduzme visinu headera i eventualnog footera */
   padding: 60px 0;
   padding-top: 0px;
   overflow: hidden;
   color: white;
-  /* Spriječite skrolanje unutar sekcije */
 }
 
 .custom-header {
@@ -382,37 +339,30 @@ footer {
 
 .faq-section {
   height: calc(100vh - 130px);
-  /* Prilagodite visinu sekcije da oduzme visinu headera i eventualnog footera */
   overflow: hidden;
   margin-top: 0;
-  /* Spriječite skrolanje unutar sekcije */
 }
 
 
 .chat-container {
   max-height: calc(100vh - 380px);
-  /* Ograničimo maksimalnu visinu na visinu prozora minus visina footera */
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding-right: 20px;
-  /* Dodajte padding za scrollbar */
 }
 
 .chat-container-admin {
   max-height: calc(150vh - 380px);
-  /* Ograničimo maksimalnu visinu na visinu prozora minus visina footera */
   overflow-x: auto;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding-right: 20px;
   color: white;
-  /* Dodajte padding za scrollbar */
 }
 
-/* Stilizacija za bijeli tekst unutar tablice */
 .table td,
 .table th {
   color: white;
@@ -427,14 +377,12 @@ footer {
   color: white;
   font-size: 14px;
   overflow-wrap: break-word;
-  /* Omogućite prelamanje teksta unutar balona */
 }
 
 @media (max-width: 768px) {
   .chat-container {
 
     height: 50vh;
-    /* Postavite visinu na 50% visine ekrana */
   }
 }
 
@@ -442,7 +390,6 @@ footer {
   .chat-container-admin {
 
     height: 50vh;
-    /* Postavite visinu na 50% visine ekrana */
   }
 }
 
@@ -450,7 +397,6 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* Postavite visinu na 100% visine ekrana */
   overflow-y: auto;
 }
 
@@ -458,7 +404,6 @@ footer {
   display: flex;
   flex-direction: column;
   height: 150vh;
-  /* Postavite visinu na 100% visine ekrana */
   overflow-y: auto;
 }
 
@@ -466,7 +411,6 @@ footer {
   flex: 1;
   /* Omogućuje da ovaj element raste kako se chat container smanjuje */
   overflow-y: auto;
-  /* Omogućuje vertikalni scrollbar ako je sadržaj previsok */
   height: 80%;
 }
 
@@ -488,11 +432,9 @@ footer {
   padding-bottom: 10px;
 }
 
-/* Dodajte ove stilove na dno vašeg CSS-a */
 
 .question-input {
   margin-top: 20px;
-  /* Prilagodite prema potrebi */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,23 +444,18 @@ footer {
 
 .question-input p {
   margin-bottom: 10px;
-  /* Prilagodite prema potrebi */
 }
 
 .question-input input[type="text"] {
   width: 80%;
-  /* Prilagodite prema potrebi */
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 10px;
-  /* Prilagodite prema potrebi */
 }
 
 .question-input button {
   padding: 10px 20px;
-  /* Prilagodite prema potrebi */
   background-color: #305891;
-  /* Prilagodite prema vašoj temi */
   border: none;
   color: white;
   cursor: pointer;
@@ -527,28 +464,22 @@ footer {
 
 .question-input button:hover {
   background-color: #87c9d6;
-  /* Prilagodite prema vašoj temi */
 }
 
 .social-icons a i {
   font-size: 24px;
 }
 
-/* Postavite boju ikona isto kao i boju gumba za slanje */
 .social-icons a i {
   padding: 0px 2px 0 2px;
   color: #305891;
-  /* Promijenite boju prema potrebi */
 }
 
-/* Promijenite boju ikona kada se hovera */
 .social-icons a:hover i {
   color: #87c9d6;
-  /* Tirkizna boja */
 }
 
 
-/* Stilizacija za formu */
 form {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -557,7 +488,6 @@ form {
 
 form .form-check-label img {
   width: 160px;
-  /* Promijenjeno sa 100px na 80px za manje slike */
   height: auto;
   display: block;
   padding-top: 5px;
@@ -599,7 +529,6 @@ form button:hover {
   max-width: 100%;
   height: auto;
   width: 150px;
-  /* Postavite željenu širinu slika */
 }
 
 .img-fluid-offer {
@@ -607,7 +536,6 @@ form button:hover {
   border-radius: 8px;
   width: 150px;
   height: 200px;
-  /* Postavite željenu širinu slika */
 }
 
 .send-offer-body {
@@ -630,37 +558,27 @@ text-align: end;
 
 .third-section-offer {
   height: 700px;
-  /* Prilagodite visinu sekcija prema potrebi */
   background-color: #2B2B2B;
-  /* Prozirna pozadina */
 }
 
 .second-section-offer {
   background-image: url('../images/bg-kraj.png');
-  /* Postavite sliku pozadine za cijelu stranicu */
   background-size: cover;
-  /* Da slika pokrije cijelu pozadinu */
   background-position: center;
-  /* Da slika bude centrirana */
   padding-bottom: 5px;
-  /* Prilagodite potrebnoj udaljenosti od sekcije ispod */
   height: auto;
-  /* Postavite visinu na auto kako bi se sekcija prilagodila sadržaju */
 }
 
 .first-section-offer {
   background-color: #2B2B2B;
   /* Prozirna pozadina */
   padding-bottom: 5px;
-  /* Prilagodite potrebnoj udaljenosti od sekcije ispod */
   height: auto;
-  /* Postavite visinu na auto kako bi se sekcija prilagodila sadržaju */
 }
 
 .first-section-offer {
   padding-bottom: 30px;
   color: white;
-  /* Povećajte razmak ispod prve sekcije */
 }
 
 
@@ -673,24 +591,19 @@ text-align: end;
   display: flex;
   /* Postavljanje na fleksibilni prikaz kako bi se elementi postavili u isti red */
   align-items: center;
-  /* Poravnanje elemenata po vertikali */
 }
 
 .image-description {
   margin-left: 10px;
-  /* Dodavanje razmaka između slike i teksta */
 }
 
 .form-check-input {
   margin-right: 5px;
-  /* Dodavanje razmaka između radio dugmeta i teksta */
 }
 
 .btn-primary {
   padding: 10px 20px;
-  /* Prilagodite prema potrebi */
   background-color: #305891;
-  /* Prilagodite prema vašoj temi */
   border: none;
   color: white;
   cursor: pointer;
@@ -699,65 +612,49 @@ text-align: end;
 
 .btn-primary:hover {
   background-color: #87c9d6;
-  /* Prilagodite prema vašoj temi */
 }
 
 .btn-primary-admin ,a.btn-primary-admin{
   padding: 5px 10px;
   margin-bottom: 5px;
-  /* Prilagodite prema potrebi */
   background-color: #305891;
-  /* Prilagodite prema vašoj temi */
   border: none;
   color: white;
   border-radius: 20px;
-  text-align: center; /* Osigurava da tekst bude centriran */
-  display: inline-block; /* Osigurava da <a> element ima inline-block ponašanje */
-  cursor: pointer; /* Osigurava da kursor bude pokazivač */
+  text-align: center; 
+  display: inline-block; 
+  cursor: pointer; 
 }
 
 .btn-primary-admin:hover,a.btn-primary-admin:hover{
   background-color: #87c9d6;
-  /* Prilagodite prema vašoj temi */
 }
 
-/* Stilizacija radio dugmadi */
 .form-check-input[type="radio"] {
   display: none;
-  /* Skrivamo stvarni radio button */
 }
 
 .form-check-label {
   position: relative;
-  /* Relativno pozicioniranje omogućava dodavanje pseudo-elementa */
   padding-left: 25px;
-  /* Pomak teksta radiom dugmeta */
 }
 
-/* Stilizacija radio dugmadi */
 .form-check-input[type="radio"] {
   display: none;
-  /* Skrivamo stvarni radio button */
 }
 
 .form-check-label {
   position: relative;
-  /* Relativno pozicioniranje omogućava dodavanje pseudo-elementa */
   padding-left: 25px;
-  /* Pomak teksta radiom dugmeta */
 }
 
-/* Stilizacija radio dugmadi */
 .form-check-input[type="radio"] {
   display: none;
-  /* Skrivamo stvarni radio button */
 }
 
 .form-check-label {
   position: relative;
-  /* Relativno pozicioniranje omogućava dodavanje pseudo-elementa */
   padding-left: 25px;
-  /* Pomak teksta radiom dugmeta */
 }
 
 .form-check-label::before {
@@ -767,73 +664,49 @@ text-align: end;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
-  /* Veličina simuliranog radio dugmeta */
   height: 18px;
-  /* Veličina simuliranog radio dugmeta */
   border-radius: 50%;
-  /* Zaobljeni rubovi */
   border: 2px solid #305891;
-  /* Okvir */
   background-color: transparent;
-  /* Pozadina */
   z-index: 1;
-  /* Postavljamo z-index iznad pseudo-elementa ::after */
 }
 
 .form-check-input[type="radio"]:checked+.form-check-label::before {
   background-color: #305891;
-  /* Boja označenog radio dugmeta */
 }
 
 .form-check-label:hover::before {
   background-color: #87c9d6;
-  /* Boja označenog radio dugmeta na hover */
 }
 
-/* Stilizacija oznake */
 .form-check-label::after {
   content: '';
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
-  /* Postavljamo na 0 da bude nevidljiv */
   width: 10px;
-  /* Veličina oznake */
   height: 10px;
-  /* Veličina oznake */
   border-radius: 50%;
-  /* Zaobljeni rubovi */
   background-color: white;
-  /* Boja oznake */
   z-index: 2;
-  /* Postavljamo z-index iznad pseudo-elementa ::before */
   opacity: 0;
-  /* Postavljamo početnu transparentnost na 0 */
   transition: all 0.3s ease;
-  /* Dodajemo prijelaz za glatko pojavljivanje */
 }
 
 .form-check-input[type="radio"]:checked+.form-check-label::after {
   transform: translate(-50%, -50%) scale(1);
-  /* Povećavamo vidljivost oznake kada je radio dugme označeno */
   opacity: 1;
-  /* Postavljamo transparentnost na 1 */
 }
 
-/* Uklanjanje bijelog buttona kada je radio dugme označeno */
 .form-check-input[type="radio"]:checked+.form-check-label::after {
   content: none;
 }
 
-/* Razmak između radio buttona */
 .form-check-inline input[type="radio"]+label {
   margin-right: 20px;
-  /* Dodajemo razmak od 20px između radio buttona i labela */
 }
 
-/* Prilagodba grid sustava za manje ekrane */
-/* Stilovi za fluidnost na manjim ekranima */
 @media (max-width: 767px) {
 
   /* Raspored */
@@ -875,11 +748,9 @@ body .main-article {
 .heading-white {
   color: white;
   font-size: 24px;
-  /* Prilagodite prema potrebi */
   font-weight: bold;
 }
 
-/* Vaš postojeći CSS */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -893,7 +764,6 @@ body {
   /* Crna pozadina */
 }
 
-/* unos_stilova.css */
 
 /* Dodavanje paddinga na mobilnim ekranima manjim od 575px */
 @media (max-width: 575px) {
@@ -907,7 +777,6 @@ body {
   /* Stil za prikazivanje teksta ispod gumba */
   .unos-form-group-last-child {
     margin-top: 10px;
-    /* Prilagodite željeni razmak */
   }
 }
 
@@ -915,9 +784,7 @@ body {
   padding-top: 2px;
   border-radius: 8px;
   max-width: 95%;
-  /* Slika će zauzeti 100% širine roditeljskog elementa */
   height: auto;
-  /* Visina će biti automatski izračunata kako bi se očuvali proporcije */
 }
 
 .paragraph-ispis {
@@ -932,7 +799,6 @@ body {
   max-width: 100%;
   height: auto;
   width: 270px;
-  /* Postavite željenu širinu slika */
   border-radius: 8px;
 }
 
@@ -950,11 +816,8 @@ body {
 
 .dropdown-menu {
   margin-top: 0;
-  /* Postavljamo da nema margin-top kako bi se prikazao ispod dropdown-a */
   margin-left: 0 !important;
-  /* Resetujemo margin-left */
   left: 0 !important;
-  /* Postavljamo left na 0 kako bi se prikazao ispod dropdown-a */
 }
 
 .dropdown-toggle::after {
@@ -966,7 +829,6 @@ body {
 .dropdown-divider {
   width: 80%;
   margin-left: 20px;
-  /* Promenite ovu vrednost da biste prilagodili dužinu crte */
 }
 
 .img-fluid{

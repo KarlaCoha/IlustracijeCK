@@ -1,12 +1,9 @@
 <?php
-// Provjeri je li postavljen GET parametar 'kategorija'
 if (!isset($_GET['kategorija'])) {
-    // Ako nije, preusmjeri korisnika na index.php
     header("Location: index.php");
     exit();
 }
 
-// Nastavite s ostalim dijelom koda za prikaz odabrane kategorije
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +24,6 @@ if (!isset($_GET['kategorija'])) {
 
     <?php include('navbar.php'); ?>
 
-    <!-- Main content -->
     <main>
         <?php
         // Povezivanje s bazom podataka
@@ -45,7 +41,7 @@ if (!isset($_GET['kategorija'])) {
         }
 
         
-        // Provera da li je postavljen GET parametar 'kategorija'
+        // Provera je li postavljen GET parametar 'kategorija'
         if (isset($_GET['kategorija'])) {
             $kategorija = $_GET['kategorija'];
 
@@ -64,14 +60,13 @@ if (!isset($_GET['kategorija'])) {
                 echo "<div id='carousel_$kategorija' class='carousel slide' data-ride='carousel'>";
                 echo "<div class='carousel-inner'>";
 
-                // Inicijalizacija brojača za kontrolu prikaza slika u redu
+                // Brojač za kontrolu prikaza ilustr u retku
                 $counter = 0;
 
                 while ($row = $result->fetch_assoc()) {
-                    // Otvori novi red svakih 3 slike
                     if ($counter % 3 === 0) {
                         echo "<div class='carousel-item" . ($counter === 0 ? " active" : "") . "'>";
-                        echo "<div class='row'>"; // Dodaj red unutar carousel-item
+                        echo "<div class='row'>"; 
                     }
 
                     echo "<div class='col-md-4'>";
@@ -84,22 +79,20 @@ if (!isset($_GET['kategorija'])) {
                     echo "</div>";
                     echo "</div>";
 
-                    // Zatvori red nakon svake treće slike
                     if ($counter % 3 === 2) {
-                        echo "</div>"; // Zatvori .row
-                        echo "</div>"; // Zatvori .carousel-item
+                        echo "</div>"; 
+                        echo "</div>"; 
                     }
 
                     $counter++;
                 }
 
-                // Zatvori zadnji .carousel-item ako nije već zatvoren
                 if ($counter % 3 !== 0) {
-                    echo "</div>"; // Zatvori .row
-                    echo "</div>"; // Zatvori .carousel-item
+                    echo "</div>";
+                    echo "</div>"; 
                 }
 
-                echo "</div>"; // Zatvori .carousel-inner
+                echo "</div>"; 
                 echo "<a class='carousel-control-prev' href='#carousel_$kategorija' role='button' data-slide='prev'>";
                 echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
                 echo "<span class='sr-only'>Previous</span>";
@@ -108,9 +101,9 @@ if (!isset($_GET['kategorija'])) {
                 echo "<span class='carousel-control-next-icon' aria-hidden='true'></span>";
                 echo "<span class='sr-only'>Next</span>";
                 echo "</a>";
-                echo "</div>"; // Zatvori #carousel_$kategorija
-                echo "</div>"; // Zatvori .container
-                echo "</div>"; // Zatvori .full-width-bg
+                echo "</div>";
+                echo "</div>"; 
+                echo "</div>"; 
             } else {
                 echo "Nema rezultata za odabranu kategoriju.";
             }
@@ -118,7 +111,6 @@ if (!isset($_GET['kategorija'])) {
             echo "Kategorija nije odabrana.";
         }
 
-        // Zatvaranje veze s bazom podataka
         $conn->close();
         ?>
     </main>

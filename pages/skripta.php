@@ -1,6 +1,6 @@
 <?php
 // Povezivanje s bazom podataka
-$servername = "localhost"; // Promijenite ovo prema vašem MySQL serveru
+$servername = "localhost"; 
 $username = "root";
 $password = "";
 $database = "ilustracije";
@@ -24,11 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $slika = $_FILES['pphoto']['name'];
 
   // Upload slike
-  $target_dir = "../images/"; // Kreirajte mapu 'uploads' u direktoriju vaše aplikacije
+  $target_dir = "../images/"; 
   $target_file = $target_dir . basename($_FILES["pphoto"]["name"]);
   move_uploaded_file($_FILES["pphoto"]["tmp_name"], $target_file);
 
-  // Ovdje ćemo dobiti najveći ID u tablici ilustracije
   $result = $conn->query("SELECT MAX(id) AS max_id FROM ilustracije");
   $row = $result->fetch_assoc();
   $max_id = $row["max_id"];
@@ -50,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Zatvaranje veze s bazom podataka
 $conn->close();
 
-// Nakon što uneseni podaci budu obrađeni i pohranjeni u bazu podataka, generirajte dinamički HTML kod za prikaz podataka
 ?>
 
 <!DOCTYPE html>
@@ -168,7 +166,7 @@ $conn->close();
             document.getElementById("porukaKategorija").innerHTML = "";
           }
 
-          // Ako forma nije ispravna, spriječi slanje
+          // Ako forma nije ok, ne šalji
           if (!slanjeForme) {
             event.preventDefault();
           }

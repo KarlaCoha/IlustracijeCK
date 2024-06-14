@@ -17,7 +17,6 @@
 
   <?php include('navbar.php'); ?>
 
-  <!-- Main content -->
   <main>
     <?php
     // Povezivanje s bazom podataka
@@ -34,7 +33,7 @@
       die("Neuspjelo spajanje na bazu podataka: " . $conn->connect_error);
     }
 
-    // Niz kategorija
+    // Kategorije
     $kategorije = array("Portreti", "Karikature", "Personalizirani sadržaj");
 
     // Prikaz carousela za svaku kategoriju
@@ -48,8 +47,8 @@
 
       // Provjera jesu li rezultati pronađeni
       if ($result->num_rows > 0) {
-        echo "<div class='$section_class_name'>"; // Dodan section class
-        echo "<div class='container container-bg'>"; // Dodan container-bg
+        echo "<div class='$section_class_name'>"; 
+        echo "<div class='container container-bg'>"; 
         echo "<div class='hr-container'>";
         echo "<span class='hr-title'>" . strtoupper($kategorija) . "</span>";
         echo "<hr class='custom-hr'>";
@@ -61,10 +60,9 @@
         $counter = 0;
 
         while ($row = $result->fetch_assoc()) {
-          // Otvori novi red svakih 3 slike
           if ($counter % 3 === 0) {
             echo "<div class='carousel-item" . ($counter === 0 ? " active" : "") . "'>";
-            echo "<div class='row'>"; // Dodaj red unutar carousel-item
+            echo "<div class='row'>"; 
           }
 
           echo "<div class='col-md-4'>";
@@ -77,22 +75,20 @@
           echo "</div>";
           echo "</div>";
 
-          // Zatvori red nakon svake treće slike
           if ($counter % 3 === 2) {
-            echo "</div>"; // Zatvori .row
-            echo "</div>"; // Zatvori .carousel-item
+            echo "</div>"; 
+            echo "</div>"; 
           }
 
           $counter++;
         }
 
-        // Zatvori zadnji .carousel-item ako nije već zatvoren
         if ($counter % 3 !== 0) {
-          echo "</div>"; // Zatvori .row
-          echo "</div>"; // Zatvori .carousel-item
+          echo "</div>"; 
+          echo "</div>"; 
         }
 
-        echo "</div>"; // Zatvori .carousel-inner
+        echo "</div>"; 
         echo "<a class='carousel-control-prev' href='#carousel_$kategorija' role='button' data-slide='prev'>";
         echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
         echo "<span class='sr-only'>Previous</span>";
@@ -101,21 +97,20 @@
         echo "<span class='carousel-control-next-icon' aria-hidden='true'></span>";
         echo "<span class='sr-only'>Next</span>";
         echo "</a>";
-        echo "</div>"; // Zatvori #carousel_$kategorija
-        echo "</div>"; // Zatvori .container
-        echo "</div>"; // Zatvori .section class
+        echo "</div>"; 
+        echo "</div>"; 
+        echo "</div>"; 
         $index++;
       } else {
-        echo "<div class='$section_class_name'>"; // Dodan section class
-        echo "<div class='container container-bg'>"; // Dodan container-bg
+        echo "<div class='$section_class_name'>"; 
+        echo "<div class='container container-bg'>"; 
         echo "Nema rezultata za odabranu kategoriju.";
-        echo "</div>"; // Zatvori .container
-        echo "</div>"; // Zatvori .section class
+        echo "</div>"; 
+        echo "</div>";
         $index++;
       }
     }
 
-    // Zatvaranje veze s bazom podataka
     $conn->close();
     ?>
   </main>

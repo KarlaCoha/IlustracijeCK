@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <!-- Dodajte ikone Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -43,7 +42,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
-        // JavaScript za otvaranje dropdown-a na hover
+        // JavaScript za otvaranje dropdowna na hover
         $(document).ready(function() {
             $('.dropdown').hover(function() {
                 $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);

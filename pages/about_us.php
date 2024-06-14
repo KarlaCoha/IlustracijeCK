@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../css/style.css?v=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Dodajte samo ovu liniju za Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
@@ -18,11 +17,9 @@
 
   <?php include('navbar.php'); ?>
 
-  <!-- Main content -->
   <main>
     <div class="about-us-section second-section">
       <div class="container">
-        <!-- O Nama Section -->
         <div class="section-header o-nama">
           <h2 class="title-about-us">O NAMA</h2>
         </div>
@@ -30,7 +27,6 @@
           <p>Dobrodošli u Ilustracije CK, gdje se susreću kreativnost i radost! Ja sam Karla, osnivačica ove platforme, i svoju ljubav prema ilustraciji nosim od malih nogu. Nakon godina predanog rada i osvajanja brojnih nagrada za svoje radove, odlučila sam podijeliti svoju strast s vama kroz stvaranje personaliziranih ilustracija koje su više od običnog poklona - one su priča, emocija i nezaboravan trenutak u životu.</p>
         </div>
 
-        <!-- Naša Vizija Section -->
         <div class="section-header nasa-vizija">
           <h2 class="title-about-us">NAŠA VIZIJA</h2>
         </div>
@@ -41,7 +37,6 @@
 
         </div>
 
-        <!-- Icons Section -->
         <div class="icons-row">
           <div class="icon-box">
             <i class="fa-solid fa-award"></i>

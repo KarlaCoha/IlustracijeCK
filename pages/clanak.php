@@ -31,10 +31,9 @@
         die("Neuspjelo spajanje na bazu podataka: " . $conn->connect_error);
       }
 
-      // Dohvat ID-a iz URL-a
       $id = $_GET['id'];
 
-      // SQL upit za dohvat podataka o odabranoj slici koristeći prepared statement
+      // SQL upit za dohvat podataka o odabranoj ilustr koristeći pstmt
       $stmt = $conn->prepare("SELECT * FROM ilustracije WHERE id = ?");
       $stmt->bind_param("i", $id);
       $stmt->execute();
@@ -63,7 +62,7 @@
         echo "Nema rezultata za prikaz.";
       }
 
-      // Zatvaranje prepared statementa i veze s bazom podataka
+      // Zatvaranje pstmt i veze s bazom podataka
       $stmt->close();
       $conn->close();
     } else {

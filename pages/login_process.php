@@ -26,9 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("s", $korisnicko_ime);
     $stmt->execute();
     $result = $stmt->get_result();
-    // Prilikom registracije ili ažuriranja lozinke
 $hashed_password = password_hash($unhashed_password, PASSWORD_DEFAULT);
-// Spremanje $hashed_password u bazu umjesto $unhashed_password
 
 
     // Provjera rezultata upita
@@ -37,7 +35,6 @@ $hashed_password = password_hash($unhashed_password, PASSWORD_DEFAULT);
 
         // Provjera lozinke
         if (password_verify($lozinka, $row['lozinka'])) {
-            // Postavi sesijske varijable
             $_SESSION['korisnik_id'] = $row['id'];
             $_SESSION['korisnicko_ime'] = $korisnicko_ime;
             $_SESSION['ime'] = $row['ime'];
@@ -61,10 +58,10 @@ $hashed_password = password_hash($unhashed_password, PASSWORD_DEFAULT);
         exit();
     }
 
-    // Zatvaranje prepared statementa
+    // Zatvaranje pstmt
     $stmt->close();
 }
 
-// Zatvaranje veze s bazom podataka
+// Zatvaranje veze 
 $conn->close();
 ?>
